@@ -159,7 +159,7 @@ func CreateNewChat(input ChatCompletionInputDTO) (*entity.Chat, error) {
 	}
 	chat, err := entity.NewChat(input.UserID, initialMessage, chatConfig)
 	if err != nil {
-		return nil, errors.New("errors creating new chat: ", err.Error())
+		return nil, errors.New("errors creating new chat: " + err.Error())
 	}
 	return chat, nil
 }
